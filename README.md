@@ -10,6 +10,6 @@ After accepting the user input, use those numbers to generate a multiplication t
 
 The table cells should show the mathmatical problem (i.e. 3 x 2) and the answer.
 
-_Example: 3 x 2 = 5_
+**Example: 3 x 2 = 5**
 
 No styles are required, but if you choose to use styles they must utilize vanilla CSS. No pre-processors allowed!
