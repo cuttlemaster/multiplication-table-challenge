@@ -27,20 +27,16 @@ document.addEventListener("DOMContentLoaded", function(){
     const table = document.createElement('table');
     body.appendChild(table);
 
-    // BUILD OUT THE ROWS NEEDED FOR THE TABLE
+    // BUILD OUT THE ROWS NEEDED FOR THE TABLE AND ADD CELLS TO THEM
     for (let i = 0; i < rows; i++) {
       const newTableRow = document.createElement('tr');
       table.appendChild(newTableRow);
+
+      for (let j = 0; j < columns; j++) {
+        const newTableCell = document.createElement('td');
+        table.children[i].appendChild(newTableCell);
+      }
     }
-
-    const allTableRows = table.children;
-    console.log(`you have ${allTableRows} rows`);
-
-    // ADD CELLS TO EACH ROW OF THE TABLE
-    // for (let i = 0; i < columns; i++) {
-    //   const newTableCell = document.createElement('td');
-    //   table.children[i].appendChild(newTableCell);
-    // }
   });
 
 });
