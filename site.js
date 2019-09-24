@@ -28,11 +28,12 @@ document.addEventListener("DOMContentLoaded", function(){
     body.appendChild(table);
 
     // BUILD OUT THE ROWS NEEDED FOR THE TABLE AND ADD CELLS TO THEM
-    for (let i = 0; i < rows; i++) { // THIS ONE BUILDS THE ROWS
+    for (let i = 0; i < rows; i++) {
       const newTableRow = document.createElement('tr');
       table.appendChild(newTableRow);
 
-      for (let j = 0; j < columns; j++) { // THIS ONE ADDS CELLS TO ROWS AS ROWS ARE CREATED
+      // ADD CELLS TO THE ROWS AS EACH ROW IS CREATED BY THE LOOP
+      for (let j = 0; j < columns; j++) {
         const newTableCell = document.createElement('td');
         table.children[i].appendChild(newTableCell);
       }
