@@ -3,11 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
   // STORE THE BUTTON IN A VARIABLE TO BE USED
   const button = document.querySelector('button');
 
-  // WHEN THE BUTTON IS CLICKED ASK THE USER FOR NUMBER OF ROWS AND COLUMNS
-  // IF THE NUMBER PROVIDED IS A NEGATIVE NUMBER ASK FOR A POSITIVE NUMBER
-  // AND THEN RE-PROMPT THE USER FOR A NUMBER ANOTHER TIME
   button.addEventListener('click', function () {
-
     // PROMPTING FOR NUMBER OF ROWS AND MAKING SURE IT'S A POSITIVE NUMBER
     let rows = window.prompt('How many rows would you like?');
     if (Math.sign(rows) === -1) {
@@ -26,7 +22,17 @@ document.addEventListener("DOMContentLoaded", function(){
     if (rows === '') {rows = 12;}
     if (columns === '') {columns = 12;}
 
-    alert(`rows = ${rows} : columns = ${columns}`);
+    // AND THE TABLE ELEMENT TO THE PAGE SO IT CAN BE POPULATED
+    const body = document.querySelector('body');
+    const table = document.createElement('table');
+    body.appendChild(table);
+
+    // BUILD OUT THE ROWS AND CELLS NEEDED FOR THE TABLE
+    for (let i = 0; i < rows; i++) {
+      const tableRow = document.createElement('tr');
+      table.appendChild(tableRow);
+    }
+
   });
 
 });
