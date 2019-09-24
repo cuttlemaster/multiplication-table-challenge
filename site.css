@@ -7,3 +7,7 @@ button {
 }
 
   button:hover { cursor: pointer; }
+
+table {
+  margin: 25px auto;
+}
