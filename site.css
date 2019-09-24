@@ -6,9 +6,11 @@ button {
   padding: 10px 15px;
 }
 
-  button:hover { cursor: pointer; }
+button:hover { cursor: pointer; }
 
 table {
   margin: 25px auto;
   text-align: center;
 }
+
+.hide { display: none; }

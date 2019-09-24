@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-  // STORE THE BUTTON IN A VARIABLE TO BE USED
-  const button = document.querySelector('button');
+  // STORE THE BUTTONS SO THEY CAN BE USED
+  const generateBtn = document.querySelector('.generate-btn');
+  const resetBtn = document.querySelector('.reset-btn');
 
-  button.addEventListener('click', function () {
+  generateBtn.addEventListener('click', function () {
     // PROMPTING FOR NUMBER OF ROWS AND MAKING SURE IT'S A POSITIVE NUMBER
     let rows = window.prompt('How many rows would you like?');
     if (Math.sign(rows) === -1) {
@@ -46,6 +47,9 @@ document.addEventListener("DOMContentLoaded", function(){
         table.children[rowNumber].appendChild(newTableCell);
       }
     }
+
+    generateBtn.classList.add('hide');
+    resetBtn.classList.remove('hide');
   });
 
 });
