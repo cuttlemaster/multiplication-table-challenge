@@ -55,9 +55,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // USE THE RESET BUTTON TO CLEAR THE TABLE AND START THE GENERATOR AGAIN
   resetBtn.addEventListener('click', function () {
+    const body = document.querySelector('body');
+    const table = document.querySelector('table');
 
+    body.removeChild(table);
 
-    // SWITCH THE BUTTONS BACK TO THE DEFAULT VIEW
     resetBtn.classList.add('hide');
     generateBtn.classList.remove('hide');
   });
