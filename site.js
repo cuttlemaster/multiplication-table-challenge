@@ -25,8 +25,10 @@ document.addEventListener("DOMContentLoaded", function(){
     // AND THE TABLE ELEMENT TO THE PAGE SO IT CAN BE POPULATED
     const body = document.querySelector('body');
     const table = document.createElement('table');
+
     table.setAttribute('border', 1);
     table.setAttribute('cellpadding', 5);
+
     body.appendChild(table);
 
     // BUILD OUT THE ROWS NEEDED FOR THE TABLE AND ADD CELLS TO THEM
