@@ -1,1 +1,9 @@
 h1 { text-align: center; }
+
+button {
+  display: block;
+  margin: auto auto;
+  padding: 10px 15px;
+}
+
+  button:hover { cursor: pointer; }
