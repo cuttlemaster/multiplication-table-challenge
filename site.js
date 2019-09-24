@@ -27,11 +27,15 @@ document.addEventListener("DOMContentLoaded", function(){
     const table = document.createElement('table');
     body.appendChild(table);
 
-    // BUILD OUT THE ROWS AND CELLS NEEDED FOR THE TABLE
+    // BUILD OUT THE ROWS NEEDED FOR THE TABLE
     for (let i = 0; i < rows; i++) {
       const tableRow = document.createElement('tr');
       table.appendChild(tableRow);
     }
+
+    // BUILD OUT THE CELLS IN EACH ROW
+    const tableRows = document.querySelectorAll('tr');
+    console.log(tableRows.length);
 
   });
 
