@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
       // ADD CELLS TO THE ROWS AS EACH ROW IS CREATED BY THE LOOP
       for (let j = 1; j <= columns; j++) {
-        const newTableCell = document.createElement('td');
         const answer = i * j;
+        const newTableCell = document.createElement('td');
         newTableCell.textContent = `${i} x ${j} = ${answer}`;
 
         const rowNumber = i - 1; // DON'T UNDERSTAND WHY THIS IS NECESSARY
