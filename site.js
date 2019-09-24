@@ -32,14 +32,18 @@ document.addEventListener("DOMContentLoaded", function(){
     body.appendChild(table);
 
     // BUILD OUT THE ROWS NEEDED FOR THE TABLE AND ADD CELLS TO THEM
-    for (let i = 0; i < rows; i++) {
+    for (let i = 1; i <= rows; i++) {
       const newTableRow = document.createElement('tr');
       table.appendChild(newTableRow);
 
       // ADD CELLS TO THE ROWS AS EACH ROW IS CREATED BY THE LOOP
-      for (let j = 0; j < columns; j++) {
+      for (let j = 1; j <= columns; j++) {
         const newTableCell = document.createElement('td');
-        table.children[i].appendChild(newTableCell);
+        const answer = i * j;
+        newTableCell.textContent = `${i} x ${j} = ${answer}`;
+
+        const rowNumber = i - 1; // DON'T UNDERSTAND WHY THIS IS NECESSARY
+        table.children[rowNumber].appendChild(newTableCell);
       }
     }
   });
