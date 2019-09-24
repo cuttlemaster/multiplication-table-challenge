@@ -48,8 +48,18 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     }
 
+    // SWITCH THE BUTTONS SO RESET CAN WORK PROPERLY
     generateBtn.classList.add('hide');
     resetBtn.classList.remove('hide');
+  });
+
+  // USE THE RESET BUTTON TO CLEAR THE TABLE AND START THE GENERATOR AGAIN
+  resetBtn.addEventListener('click', function () {
+
+
+    // SWITCH THE BUTTONS BACK TO THE DEFAULT VIEW
+    resetBtn.classList.add('hide');
+    generateBtn.classList.remove('hide');
   });
 
 });
