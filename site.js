@@ -29,14 +29,18 @@ document.addEventListener("DOMContentLoaded", function(){
 
     // BUILD OUT THE ROWS NEEDED FOR THE TABLE
     for (let i = 0; i < rows; i++) {
-      const tableRow = document.createElement('tr');
-      table.appendChild(tableRow);
+      const newTableRow = document.createElement('tr');
+      table.appendChild(newTableRow);
     }
 
-    // BUILD OUT THE CELLS IN EACH ROW
-    const tableRows = document.querySelectorAll('tr');
-    console.log(tableRows.length);
+    const allTableRows = table.children;
+    console.log(`you have ${allTableRows} rows`);
 
+    // ADD CELLS TO EACH ROW OF THE TABLE
+    // for (let i = 0; i < columns; i++) {
+    //   const newTableCell = document.createElement('td');
+    //   table.children[i].appendChild(newTableCell);
+    // }
   });
 
 });
