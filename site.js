@@ -7,16 +7,28 @@ document.addEventListener("DOMContentLoaded", function(){
   generateBtn.addEventListener('click', function () {
     // PROMPTING FOR NUMBER OF ROWS AND MAKING SURE IT'S A POSITIVE NUMBER
     let rows = window.prompt('How many rows would you like?');
-    if (Math.sign(rows) === -1) {
+    while (Math.sign(rows) === -1) {
       alert('You must provide a positive number of rows!');
       rows = window.prompt('How many rows would you like?');
     }
 
+    while (isNaN(rows)) {
+      alert('You must provide a NUMBER of rows!');
+      rows = window.prompt('How many rows would you like?');
+      console.log(`rows = ${rows}`);
+    }
+
     // PROMPTING FOR NUMBER OF COLUMNS AND MAKING SURE IT'S A POSITIVE NUMBER
     let columns = window.prompt('How many columns would you like?');
-    if (Math.sign(columns) === -1) {
+    while (Math.sign(columns) === -1) {
       alert('You must provide a positive number of columns!');
       columns = window.prompt('How many rows would you like?');
+    }
+
+    while (isNaN(columns)) {
+      alert('You must provide a NUMBER of columns!');
+      columns = window.prompt('How many columns would you like?');
+      console.log(`columns = ${columns}`);
     }
 
     // IF NO VALUE IS ADDED TO PROMPT, DEFAULT TO VALUE OF '12'
