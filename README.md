@@ -14,6 +14,6 @@ The table cells should show the mathmatical problem (i.e. 3 x 2) and the answer.
 
 No styles are required, but if you choose to use styles they must utilize vanilla CSS. No pre-processors allowed!
 
-[https://multiplication-table-generator.netlify.com/](https://multiplication-table-generator.netlify.com/)
+[https://multiplication-table-generator.netlify.app/](https://multiplication-table-generator.netlify.app/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c4b6f0f1-10c9-43ca-a7bb-cf5738eb732b/deploy-status)](https://app.netlify.com/sites/multiplication-table-generator/deploys)
